@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class CartaPokemon {
+    -- Atributs --
+    - nom: String
+    - tipus: Tipus
+    - puntsAtac: Int
+    - puntsDefensa: Int
+    -- Mètodes --
+    + CartaPokemon(nom: String, tipus: String, puntsAtac: Int, puntsDefensa: Int)
+    + getNom(): String
+    + poderTotal(puntsAtac, puntsDefensa): Int
+    + compararPoder(poderTotal(puntsAtac, puntsDefensa)): Int
+}
+
+class JugadorPokemon {
+    -- Atributs --
+    - nom: String
+    - cartes: List<CartaPokemon>
+}
+
+@enduml
