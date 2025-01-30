@@ -13,12 +13,16 @@ class BegudaMonster {
 class Participant {
     -- Atributs --
     - nom: String
-    - edat: Int
+    - dataNaixement: LocalDate
     - totalCafeina: Float
     - begudes: List<BegudaMonster>
+
     -- Mètodes --
+    + constructor(nom: String, dataNaixement: LocalDate, totalCafeina: Float, begudes: List<BegudaMonster>)
     + registrarConsum(nova: List<BegudaMonster>): List<BegudaMonster>
     + consultarCafeina(totalCafeina: Float): Float
+    + calcularEdat(dataNaixement: LocalDate): Int
+    + haSuperatLimitOMS(totalCafeina: Float): Boolean
 }
 
 @enduml
