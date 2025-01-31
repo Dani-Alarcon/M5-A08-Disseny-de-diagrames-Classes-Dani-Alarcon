@@ -1,0 +1,47 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+enum Tipus {
+    electric
+    combustible
+}
+
+class Motor{
+    -- Atributs --
+    - potencia: Int
+    - pes: Int
+    - preu: Int
+    - tipus: Tipus
+    - tempsVol: Int
+    -- Mètodes --
+    + constructor(Int, Int, Int, Tipus, Int)
+    + getPotencia(potencia: Int): Int
+    + consumEnergetic(temps: Int): Int
+}
+
+class Bateria {
+    -- Atributs --
+    - capacitat: Int
+    - tempsCarregaTotal: Int
+    - pes: Int
+    - tempsAutonomia: Int
+    -- Mètodes --
+    + constructor(Int, Int, Int, Int)
+    + getBateriaRestant(tempsAutonomia: Int): Int
+    + carregarBateria(tempsCarregaTotal: Int): Int
+}
+
+class Dron {
+    -- Atributs --
+    - nom: String
+    - presTotal: Int
+    - begudesDisponibles: List<Beguda>
+    - persones: List<Amic>
+    - capacitat: Int
+    -- Mètodes --
+    + constructor(String, Int, List<Beguda>)
+    + getBegudes(begudes: List<Beguda>): List<Beguda>
+    + registratAmic(amic: List<Amic>, capacitat: Int): List<Amic>
+}
+
+@enduml

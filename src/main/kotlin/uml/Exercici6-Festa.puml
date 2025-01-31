@@ -8,7 +8,6 @@ class Beguda{
     - preu: Int
     -- Mètodes --
     + constructor(String, Equip)
-    + entrenar()
 }
 
 class Amic {
