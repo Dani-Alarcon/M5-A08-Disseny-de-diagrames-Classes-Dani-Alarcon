@@ -29,8 +29,9 @@ class Instructor{
     - cotxeUtilitzat: Cotxe
     -- Mètodes --
     + constructor(String, Int, Cotxe)
-    + assignarPractica(): Practica
-    + getPractriquesFetes(practica: Int): Int
+    + assignarPractica(alumne: Alumne)
+    + consultarTotalPractiques(): Int
+    + getPractriquesFetes(): Int
     + teoricaAprovada(): Boolean
 }
 
@@ -43,8 +44,8 @@ class Alumne {
     -- Mètodes --
     + constructor(String, Int, Boolean, Int)
     + sumarPractica(practriquesFetes: Int): Int
-    + getPractriquesFetes(practriquesFetes: Int): Int
-    + setAprovarTeorica(teoricaAprovada: Boolean): Boolean
+    + getPractriquesFetes(): Int
+    + setAprovarTeorica(teoricaAprovada: Boolean)
 }
 
 class Practica {
@@ -52,9 +53,15 @@ class Practica {
     - profesor: Instructor
     - alumne: Alumne
     - data: LocalDate
+    - durada: Int
     -- Mètodes --
     + constructor(Instructor, Alumne, LocalDate)
-    + setDurada(): Int
+    + setDurada(durada: Int)
 }
+Instructor --* Practica
+Instructor --* Cotxe
+Alumne --* Practica
+Tipus --*Cotxe
+Marxes --* Cotxe
 
 @enduml

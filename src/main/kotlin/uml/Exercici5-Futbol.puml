@@ -23,6 +23,7 @@ class Entrenador{
     + entrenar()
 }
 
+Equip *--Jugador
 class Equip {
     -- Atributs --
     - nom: String

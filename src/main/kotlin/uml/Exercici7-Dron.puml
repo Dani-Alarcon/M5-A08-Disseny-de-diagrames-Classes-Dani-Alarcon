@@ -15,7 +15,7 @@ class Motor{
     - tempsVol: Int
     -- Mètodes --
     + constructor(Int, Int, Int, Tipus, Int)
-    + getPotencia(potencia: Int): Int
+    + getPotencia(): Int
     + consumEnergetic(temps: Int): Int
 }
 
@@ -27,7 +27,7 @@ class Bateria {
     - tempsAutonomia: Int
     -- Mètodes --
     + constructor(Int, Int, Int, Int)
-    + getBateriaRestant(tempsAutonomia: Int): Int
+    + getBateriaRestant(): Int
     + carregarBateria(tempsCarregaTotal: Int): Int
 }
 
@@ -40,7 +40,7 @@ class Dron {
     - capacitat: Int
     -- Mètodes --
     + constructor(String, Int, List<Beguda>)
-    + getBegudes(begudes: List<Beguda>): List<Beguda>
+    + getBegudes(): List<Beguda>
     + registratAmic(amic: List<Amic>, capacitat: Int): List<Amic>
 }
 
